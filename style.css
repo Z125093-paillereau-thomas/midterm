@@ -8,16 +8,96 @@ body {
     padding: 0;
 }
 
-.fixedContainer {
-    position: relative;
+h2 {
+    z-index: inherit;
+    text-align: center;
 }
 
-.fixedContainer > img {
-    position: relative;
+h1 {
+    z-index: inherit;
 }
 
-.fixedContainer > .title {
-    position: fixed center;
+@media (min-width: 800px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 15px;
+    }
+}
+
+/* Image and Text container*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.item {
+    display: flex;
+    max-width: inherit;
+    height: 350px;
+
+    @media (max-width: 800px) {
+        height: 200px;
+    }
+    
+    @media (max-width: 400px) {
+        height: 150px;
+
+    }
+}
+
+.item.left {
+    justify-content: flex-start;
+}
+
+.item.right {
+    justify-content: flex-end;
+}
+
+.image-box {
+    position: relative;
+    width: 500px;
+    height: inherit;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    color: white;
+
+    @media (max-width: 800px) {
+        width: 400px;
+    }
+
+    @media (max-width: 400px) {
+        width: 100%;
+
+    }
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container > .title {
+    position: fixed;
     color: black;
     display: block;
     padding: 20px;
@@ -26,6 +106,7 @@ body {
     backdrop-filter: blur(10px);
     font-size: 4vw;
 }
+
 
 /* Main Title */
 
@@ -33,113 +114,119 @@ body {
     z-index: 0;
     width: 100vw;
     height: 100vh;
-}
 
-.mainFrame > .fixedContainer {
-    z-index: -1;
-    position: fixed;
-}
 
-.mainFrame > .fixedContainer > img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center top;
-}
+    .container {
+        z-index: -1;
+        position: fixed;
+    }
 
-.mainFrame> .fixedContainer > .title {
-    position: fixed;
-    top:40%;
-    left:20%;
-    color: black;
-    display: block;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(105, 46, 4, 0.4);
-    backdrop-filter: blur(10px);
-    font-size: 4vw;
+    .container > img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .container > .title {
+        z-index: 0;
+        position: fixed;
+        top: 40%;
+        left: 20%;
+        color: black;
+        display: block;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(105, 46, 4, 0.4);
+        backdrop-filter: blur(10px);
+        font-size: 4vw;
+    }
 }
 
 /* Navigation Bar */
 
 nav {
+    z-index: 999;
     position: fixed;
     width: 100%;
     background-color: white;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0,0.1);
-    
-}
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 
-nav ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+    ul {
+        width: 100%;
+        list-style: none;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
-nav li {
-    height: 30px;
-}
+    li {
+        height: 30px;
+    }
 
-nav a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;   
-}
+    a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
 
-nav a:hover{
-    background-color: lightgray;
-}
+    a:hover {
+        background-color: lightgray;
+    }
 
-nav li:first-child{
-    margin-right: auto; 
-}
+    li:first-child {
+        margin-right: auto;
+    }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
-}
 
-.sidebar li {
-    width: 100%;
-}
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
 
-.sidebar a {
-    width: 100%;
-}
+    .sidebar li {
+        width: 100%;
+    }
 
-.hideOnPc{
-    display: none;
-}
+    .sidebar a {
+        width: 100%;
+    }
 
-@media (max-width: 900px) {
-    .hideOnMobile {
+    .hideOnPc {
         display: none;
     }
-    .hideOnPc {
-        display: block;
-    }
-}
 
-@media (max-width: 400px) {
+    @media (max-width: 900px) {
+        .hideOnMobile {
+            display: none;
+        }
+
+        .hideOnPc {
+            display: block;
+        }
+    }
+
+    @media (max-width: 400px) {
+    }
+
 }
 
 /* Content */
@@ -150,57 +237,130 @@ nav li:first-child{
     width:100vw;
 }
 
-h2 {
-    z-index: inherit;
-    color: rgb(12, 168, 12);
-    text-shadow: 2px 2px 5px rgb(12, 168, 12);
-    text-align: center;
-}
 
-/* Footer */
+/* About Me */
 
-footer {
-    position: relative;
+#about {
     width: 80%;
     left: 10%;
-    background-color: rgb(12, 168, 12);
+    margin: auto;
+    padding: 20px 0;
+
+    justify-content: space-evenly;
+    font-family: Arial, sans-serif;
+    .area{
+        display: flex;
+        gap: 10px;
+        background-color: green;
+        border-radius: 10px;
+        width: min(70vw,700px);
+        margin: auto;
+        font-size: 100%;
+
+        #about-img{
+            flex:1;
+            text-align: center;
+            width: auto;
+            height: auto;
+
+            img {
+                padding: 10% 10%;
+                border-radius: 10%;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #about-info{
+            flex:2;
+            list-style: none;
+            text-align: left;
+            h2{
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+/* Diplomas */
+
+#diplomas {
+    width: 80%;
+    left: 10%;
+    display: block;
     border-radius: 10px;
-    color: white;
+    background-color: green;
+    margin: auto;
+
+    .timeline {
+        background-color: white;
+        width: 6px;
+        margin: 3%;
+        left: 10%;
+    }
+
+    .year {
+        position: relative;
+        text-align: center;
+        display: block;
+        background-color: cadetblue;
+        width: 800%;
+        border-radius: 4px;
+    }
 }
+/* Experiences */
 
-footer ul {
-    position : relative;
-    list-style: none;
-    display: flexbox;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-
-footer ul :nth-child(odd) {
-    left: 0%;
-}
-
-footer ul :nth-child(even) {
-    left: 0%;
-}
-
-footer .fixedContainer {
-    position: relative;
-}
-
-footer .fixedContainer > .title {
-    position: absolute;
-    object-position: inherit;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-footer .fixedContainer > img {
+#experiences {
+    width: 80%;
+    left: 10%;
+    display: block;
     border-radius: 10px;
-    height: 30vh;
-    width: 25vw;
-    text-align: center;
+    background-color: green;
+    margin: auto;
 }
+
+/* Skills */
+
+#skills {
+    width: 80%;
+    left: 10%;
+    display: block;
+    border-radius: 10px;
+    background-color: green;
+    margin: auto;
+}
+
+/* Projects */
+
+#projects {
+    width: 80%;
+    left: 10%;
+    display: block;
+    border-radius: 10px;
+    background-color: green;
+    margin: auto;
+}
+
+/* Hobbies */
+
+#hobbies {
+    width: 80%;
+    left: 10%;
+    display: block;
+    border-radius: 10px;
+    background-color: green;
+    margin: auto;
+}
+
+/* Recommendations */
+
+#recommendations {
+    width: 80%;
+    left: 10%;
+    display: block;
+    border-radius: 10px;
+    background-color: green;
+    margin: auto;
+}
+

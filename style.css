@@ -30,81 +30,12 @@ h1 {
 
 @media (max-width: 400px) {
     h2 {
-        font-size: 15px;
+        font-size: 5px;
     }
 }
 
 /* Image and Text container*/
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.item {
-    display: flex;
-    max-width: inherit;
-    height: 350px;
-
-    @media (max-width: 800px) {
-        height: 200px;
-    }
-    
-    @media (max-width: 400px) {
-        height: 150px;
-
-    }
-}
-
-.item.left {
-    justify-content: flex-start;
-}
-
-.item.right {
-    justify-content: flex-end;
-}
-
-.image-box {
-    position: relative;
-    width: 500px;
-    height: inherit;
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    overflow: hidden;
-    color: white;
-
-    @media (max-width: 800px) {
-        width: 400px;
-    }
-
-    @media (max-width: 400px) {
-        width: 100%;
-
-    }
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.container > .title {
-    position: fixed;
-    color: black;
-    display: block;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(105, 46, 4, 0.4);
-    backdrop-filter: blur(10px);
-    font-size: 4vw;
-}
 
 
 /* Main Title */
@@ -156,32 +87,37 @@ nav {
 
     ul {
         width: 100%;
+        height: 100%;
         list-style: none;
         box-sizing: border-box;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-    }
 
-    li {
-        height: 30px;
-    }
+        margin: 0 0;
 
-    a {
-        height: 100%;
-        padding: 0 30px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: black;
-    }
+        li {
+            height: 100%;
+            border-radius: 3px;
+            display: block;
+        }
 
-    a:hover {
-        background-color: lightgray;
-    }
+        a {
+            height: 100%;
+            padding: 16px 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
 
-    li:first-child {
-        margin-right: auto;
+        a:hover {
+            background-color: lightgray;
+        }
+
+        li:first-child {
+            margin-right: auto;
+        }
     }
 
 
@@ -199,6 +135,13 @@ nav {
         flex-direction: column;
         align-items: start;
         justify-content: flex-start;
+
+        li {
+            width: auto;
+        }
+        a{
+            padding: 0 30px;
+        }
     }
 
     .sidebar li {
@@ -213,7 +156,7 @@ nav {
         display: none;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
         .hideOnMobile {
             display: none;
         }
@@ -234,8 +177,8 @@ nav {
     background-color: white;
     border-radius: 10px;
     width:100vw;
+    overflow: hidden;
 }
-
 
 /* About Me */
 
@@ -271,6 +214,7 @@ nav {
             }
         }
 
+
         #about-info{
             flex:2;
             list-style: none;
@@ -281,7 +225,6 @@ nav {
         }
     }
 }
-
 
 /* Diplomas */
 
@@ -297,6 +240,10 @@ nav {
     padding-top: 0.1%;
     margin: auto;
 
+    h1 {
+        text-align: center;
+    }
+
     .timeline {
         position: relative;
         width: 100%;
@@ -308,8 +255,8 @@ nav {
         position: absolute;
         width: 6px;
         background-color: rgb(191, 106, 29);
-        top: 0%;
-        bottom:0%;
+        top: 0;
+        bottom:0;
         margin-left: -3px;
     }
 
@@ -359,19 +306,128 @@ nav {
     left: 10%;
     display: block;
     border-radius: 10px;
-    background-color: green;
+    border: 6px solid rgb(191, 106, 29);
     margin: auto;
+
+    .column {
+        position: relative;
+        height: auto;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        padding: 10px;
+
+        .row {
+            position: relative;
+            display: flex;
+            height: auto;
+            padding-bottom: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+
+            div {
+                position: relative;
+                margin: auto;
+                display: block;
+                background-color: black;
+                padding: 10px;
+                border-radius: 10px;
+                text-align: center;
+                width: 20%;
+                height: auto;
+
+                img {
+                    position: relative;
+                    width: 75%;
+                    height: auto;
+                }
+            }
+        }
+
+
+    }
 }
 
 /* Projects */
 
 #projects {
     width: 80%;
+    height: 180vh;
     left: 10%;
     display: block;
     border-radius: 10px;
     background-color: green;
     margin: auto;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        title {
+            position: fixed;
+            color: black;
+            display: block;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(105, 46, 4, 0.4);
+            backdrop-filter: blur(10px);
+            font-size: 4vw;
+        }
+    }
+
+    .item {
+        display: flex;
+        max-width: inherit;
+        height: 40vh;
+
+        @media (max-width: 800px) {
+            height: 200px;
+        }
+
+        @media (max-width: 400px) {
+            height: 150px;
+
+        }
+    }
+
+    .item.left {
+        justify-content: flex-start;
+    }
+
+    .item.right {
+        justify-content: flex-end;
+    }
+
+    .image-box {
+        position: relative;
+        width: 40%;
+        height: inherit;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        overflow: hidden;
+        color: white;
+
+        @media (max-width: 800px) {
+            width: 400px;
+        }
+
+        @media (max-width: 400px) {
+            width: 100%;
+
+        }
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
 }
 
 /* Hobbies */

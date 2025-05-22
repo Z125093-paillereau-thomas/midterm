@@ -9,7 +9,7 @@
 <body>
     <nav>
         <ul class="sidebar">
-            <li onclick=hideSideBar()><a href="#">X</a></li>
+            <li onclick=hideSideBar()><a href="#"><img src="close_icon_black.png" alt="close-icon"></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#">About Me</a></li>
             <li><a href="#">My Diplomas</a></li>
@@ -26,7 +26,7 @@
             <li class="hideOnMobile"><a href="#">My Projects</a></li>
             <li class="hideOnMobile"><a href="#">My Hobbies</a></li>
             <li class="hideOnMobile"><a href="#">My Recommendations</a></li>
-            <li onclick=showSideBar() class="hideOnPc"><a href="#">Mi</a></li>
+            <li onclick=showSideBar() class="hideOnPc"><a href="#"><img src="menu_icon_black.png" alt="menu-icon"></a></li>
         </ul>
     </nav>
     <div class="mainFrame">
@@ -43,7 +43,7 @@
 
     <div class="whiteRoundedSquare">
 
-        <div id="about">
+        <div class="section" id="about">
             <div class="area">
                 <div id="about-img">
                     <img src="about.jpg" alt="My photo">
@@ -63,8 +63,7 @@
             </div>
         </div>
 
-
-        <div id="diplomas">
+        <div class="section" id="diplomas">
             <h1>My Schools and Diplomas</h1>
             <div class="timeline">
                 <div class="year">2023</div>
@@ -88,8 +87,7 @@
             </div>
         </div>
 
-
-        <div id="experiences">
+        <div class="section" id="experiences">
             <h1>My Experiences</h1>
             <ul>
                 <li>Programming Summer Camp</li>
@@ -101,22 +99,26 @@
             </ul>
         </div>
 
-
-        <div id= "skills">
+        <div class="section" id= "skills">
             <h1>My Skills</h1>
-            <ul>
-                <li>Knowledge in Ocaml</li>
-                <li>Knowledge in Python</li>
-                <li>Knowledge in C</li>
-                <li>Knowledge in C#</li>
-                <li>Knowledge in HTML, CSS and JavaScript</li>
-                <li>etc ...</li>
-            </ul>
+            <div class="column">
+                <div class="row">
+                    <div><img src="ocaml-logo.png" alt="ocaml logo"></div>
+                    <div><img src="python-logo.png" alt="python logo"></div>
+                </div>
+                <div class="row">
+                    <div><img src="html-logo.png" alt="html logo"></div>
+                    <div><img src="css-logo.png" alt="css logo"></div>
+                    <div><img src="js-logo.png" alt="javascript logo"></div>
+                </div>
+                <div class="row">
+                    <div><img src="c-logo.png" alt="c logo"></div>
+                    <div><img src="c%23-logo.png" alt="c# logo"></div>
+                </div>
+            </div>
         </div>
 
-
-
-        <div id="projects">
+        <div class="section" id="projects">
             <h1>My Projects</h1>
             <div class="container">
                 <div class="item left">
@@ -145,8 +147,7 @@
             </div>
         </div>
 
-
-        <div id="hobbies">
+        <div class="section" id="hobbies">
             <h1>My Hobbies</h1>
             <ul>
                 <li>Sports</li>
@@ -157,7 +158,7 @@
             </ul>
         </div>
 
-        <div id="recommendations">
+        <div class="section" id="recommendations">
             <h1>My Recommendations</h1>
             <ul>
                 <li>Reading:...</li>

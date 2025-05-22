@@ -15,6 +15,8 @@
             <li><a href="#">My Diplomas</a></li>
             <li><a href="#">My Experiences</a></li>
             <li><a href="#">My Projects</a></li>
+            <li><a href="#">My Hobbies</a></li>
+            <li><a href="#">My Recommendations</a></li>
         </ul>
         <ul>
             <li><a href="#">Home</a></li>
@@ -22,6 +24,8 @@
             <li class="hideOnMobile"><a href="#">My Diplomas</a></li>
             <li class="hideOnMobile"><a href="#">My Experiences</a></li>
             <li class="hideOnMobile"><a href="#">My Projects</a></li>
+            <li class="hideOnMobile"><a href="#">My Hobbies</a></li>
+            <li class="hideOnMobile"><a href="#">My Recommendations</a></li>
             <li onclick=showSideBar() class="hideOnPc"><a href="#"><img src="menu_icon_black.png" alt="menu-icon"></a></li>
         </ul>
     </nav>
@@ -86,32 +90,33 @@
         <div class="section" id="experiences">
             <h1>My Experiences</h1>
             <div class="button-area">
-                <div class="button mov">
-                    <img src="arrow-back.png" alt="Back Arrow">
+                <div class="button">
+                    <div class="button-text"><</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/schmidt-logo.jpg" alt="Schmidt Group Logo">
+                    <img src="schmidt-logo.jpg" alt="Schmidt Group Logo">
+                    <div class="button-text">Information System Departement Internship</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/schuler-logo.png" alt="Schuler Group Logo">
+                    <div class="button-text">Mechanic Press Programming Internship</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/game-jam-logo.png" alt="Yoyo game jam 42 logo">
+                    <div class="button-text">Multiple GameJams</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/telligo-logo.png" alt="Telligo Logo">
+                    <div class="button-text">Programming Summer Camp</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/mjc-logo.png" alt="MJC logo">
+                    <div class="button-text">MJC Hometown</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/sbz-logo.png" alt="Saint Bio Z logo">
+                    <div class="button-text">Organic store cashier</div>
                 </div>
                 <div class="button exp">
-                    <img src="Experiences/leclerc-logo.png" alt="E.Leclerc Logo">
+                    <div class="button-text">Fish shop</div>
                 </div>
-                <div class="button mov">
-                    <img src="arrow-forward.png" alt="Forward Arrow">
+                <div class="button">
+                    <div class="button-text">></div>
                 </div>
             </div>
             <div class="text-box">
@@ -123,17 +128,17 @@
             <h1>My Skills</h1>
             <div class="column">
                 <div class="row">
-                    <div><img src="Skills/ocaml-logo.png" alt="ocaml logo"></div>
-                    <div><img src="Skills/python-logo.png" alt="python logo"></div>
+                    <div><img src="ocaml-logo.png" alt="ocaml logo"></div>
+                    <div><img src="python-logo.png" alt="python logo"></div>
                 </div>
                 <div class="row">
-                    <div><img src="Skills/html-logo.png" alt="html logo"></div>
-                    <div><img src="Skills/css-logo.png" alt="css logo"></div>
-                    <div><img src="Skills/js-logo.png" alt="javascript logo"></div>
+                    <div><img src="html-logo.png" alt="html logo"></div>
+                    <div><img src="css-logo.png" alt="css logo"></div>
+                    <div><img src="js-logo.png" alt="javascript logo"></div>
                 </div>
                 <div class="row">
-                    <div><img src="Skills/c-logo.png" alt="c logo"></div>
-                    <div><img src="Skills/c%23-logo.png" alt="c# logo"></div>
+                    <div><img src="c-logo.png" alt="c logo"></div>
+                    <div><img src="c%23-logo.png" alt="c# logo"></div>
                 </div>
             </div>
         </div>
@@ -142,7 +147,7 @@
             <h1>My Projects</h1>
             <div class="container">
                 <div class="item left">
-                    <div class="image-box" style="background-image: url('Projects/AR-screenshot.png');">
+                    <div class="image-box" style="background-image: url('AR-screenshot.png');">
                         <div class="text-overlay">Another Recursion</div>
                     </div>
                     <div class="text-box"><h2>Another Recursion</h2></div>
@@ -150,13 +155,13 @@
 
                 <div class="item right">
                     <div class="text-box"><h2>Copy and Paste</h2></div>
-                    <div class="image-box" style="background-image: url('Projects/C&P-screenshot.png');">
+                    <div class="image-box" style="background-image: url('C&P-screenshot.png');">
                         <div class="text-overlay">Copy and Paste</div>
                     </div>
                 </div>
 
                 <div class="item left">
-                    <div class="image-box" style="background-image: url('Projects/TR-screenshot.png');">
+                    <div class="image-box" style="background-image: url('TR-screenshot.png');">
                         <div class="text-overlay">Typhon's Return</div>
                     </div>
                     <div class="text-box"><h2>Typhon's Return</h2></div>
@@ -164,16 +169,32 @@
 
                 <div class="item right">
                     <div class="text-box"><h2>Sudoku solver (OCR)</h2></div>
-                    <div class="image-box" style="background-image: url('Projects/OCR-screenshot.png');">
+                    <div class="image-box" style="background-image: url('OCR-screenshot.png');">
                         <div class="text-overlay">Sudoku Solver (OCR)</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer>
+        <div class="section" id="hobbies">
+            <h1>My Hobbies</h1>
+            <ul>
+                <li>Sports</li>
+                <li>Reading</li>
+                <li>Videogames</li>
+                <li>Programming</li>
+                <li>And much more</li>
+            </ul>
+        </div>
 
-        </footer>
+        <div class="section" id="recommendations">
+            <h1>My Recommendations</h1>
+            <ul>
+                <li>Reading:...</li>
+                <li>VideoGames:...</li>
+            </ul>
+        </div>
+
     </div>
 </body>
 </html>

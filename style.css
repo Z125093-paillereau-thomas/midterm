@@ -416,20 +416,23 @@ nav {
                 }
             }
 
-            .cell:hover {
-                .title {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                .content {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                .image-box {
-                    opacity: 0;
-                    transform: scale(1.05);
+            @media (any-pointer: fine) {
+                .cell:hover {
+                    .title {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    .content {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                    .image-box {
+                        opacity: 0;
+                        transform: scale(1.05);
+                    }
                 }
             }
+
 
             .cell.active {
                 cursor: default ;

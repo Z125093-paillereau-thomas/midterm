@@ -14,8 +14,7 @@ const dTimeline = diplomas.querySelector(".timeline");
 const dContentList = dTimeline.querySelectorAll(".content");
 
 // Experience
-const textBox = document.getElementById("expTextBox");
-const expTexts = textBox.children;
+const cells = document.querySelectorAll(".cell");
 
 // Projects
 
@@ -59,12 +58,20 @@ function dipDisplay(n)
 
 
 // Experience
-function expDisplay(n)
-{
-    for (let el of expTexts)
-    {
-        el.style.display = "none";
-    }
-    expTexts[n].style.display = "block";
-}
+cells.forEach(cell => {
+    const closeButton = cell.querySelector('.close-button');
+
+    cell.addEventListener('click', () => {
+        if (!cell.classList.contains('active')) {
+            cell.classList.add('active');
+        }
+    });
+
+    closeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        cell.classList.remove('active');
+    });
+});
+
+
 

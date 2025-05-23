@@ -416,7 +416,7 @@ nav {
                 }
             }
 
-            @media (any-pointer: fine) {
+            @media (any-hover: hover) {
                 .cell:hover {
                     .title {
                         transform: translateX(0);
@@ -432,23 +432,8 @@ nav {
                     }
                 }
             }
+
             
-            @media (any-pointer: coarse) {
-                .cell:hover {
-                    .title {
-                        transform: translateX(-100%);
-                        opacity: 0;
-                    }
-                    .content {
-                        transform: translateX(-100%);
-                        opacity: 0;
-                    }
-                    .image-box {
-                        opacity: 1;
-                        transform: scale(1.00);
-                    }
-                }
-            }
 
 
             .cell.active {

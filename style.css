@@ -14,6 +14,10 @@
 
 /* General */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     z-index: 1;
     position: relative;
@@ -203,59 +207,11 @@ nav {
 
 .whiteRoundedSquare {
     background-color: white;
-    border-radius: 10px;
     width:100vw;
     overflow: hidden;
     gap: 10px;
     display: flex;
     flex-direction: column;
-}
-
-/* About Me */
-
-#about {
-    width: 80%;
-    left: 10%;
-    margin: auto;
-    padding: 20px 0;
-    border: none;
-
-    justify-content: space-evenly;
-    font-family: Arial, sans-serif;
-    .area{
-        display: flex;
-        gap: 10px;
-        background-color: white;
-        border-radius: 10px;
-        border: 2vw solid rgb(191, 106, 29);
-        width: min(70vw,700px);
-        margin: auto;
-        font-size: 100%;
-
-        #about-img{
-            flex:1;
-            text-align: center;
-            width: auto;
-            height: auto;
-
-            img {
-                padding: 10% 10%;
-                border-radius: 10%;
-                width: 100%;
-                height: auto;
-            }
-        }
-
-
-        #about-info{
-            flex:2;
-            list-style: none;
-            text-align: left;
-            h2{
-                text-align: left;
-            }
-        }
-    }
 }
 
 /* Diplomas */
@@ -278,7 +234,8 @@ nav {
     .timeline::after{
         content: '';
         position: absolute;
-        width: 6px;
+        width: 8px;
+        border-radius: 10px;
         background-color: rgb(191, 106, 29);
         top: 0;
         bottom:0;
@@ -299,14 +256,43 @@ nav {
 
     .content {
         text-align: left;
-        display: block;
+        display: flex;
+        flex-direction: row;
         background-color: white;
         padding: 1% 3%;
-        width: 50%;
+        width: 70%;
+        height: 70px;
         position: relative;
         left: 10%;
         margin: 1% 0;
         border-radius: 20px;
+        border: 2px solid lightgray;
+        gap: 10px;
+        h2 {
+            margin: auto 0;
+            font-size: 1.5vw;
+            
+            @media (max-width: 1200px) {
+                font-size: 2vw;
+            }
+
+            @media (max-width: 800px) {
+                font-size: 2.5vw;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 3vw;
+            }
+
+            @media (max-width: 400px) {
+                font-size: 3.5vw;
+            }
+        }
+
+        img{
+            max-width: 100%;
+            aspect-ratio: initial;
+        }
     }
 
     .content:hover {
@@ -327,8 +313,7 @@ nav {
         .button {
             display: block;
             width: 10%;
-            height: 0;
-            padding-bottom: 10%;
+            height: auto;
             border-radius: 50%;
 
 
@@ -338,11 +323,6 @@ nav {
                 aspect-ratio: 1/1;
                 border-radius: 50%;
                 border: 3px solid black;
-            }
-
-            .button-text{
-                text-align: center;
-                padding: 25% 0;
             }
         }
 
@@ -355,19 +335,26 @@ nav {
 
             img{
                 border:none;
-
+                background-color: lightgray;
             }
         }
     }
 
     .text-box {
         width: 90%;
-        height: 100vh;
+        height: auto;
         margin: 20px auto;
         border: 6px solid rgb(191, 106, 29);
         background-color: rgb(191,106,29);
         border-radius: 20px;
 
+        div{
+            display: none;
+        }
+
+        :first-child {
+            display: block;
+        }
     }
 }
 
@@ -510,6 +497,64 @@ nav {
     }
 
 
+}
+
+/* About Me */
+
+#about {
+    width: 80%;
+    left: 10%;
+    margin: auto;
+    padding: 20px 0;
+    border: none;
+
+    justify-content: space-evenly;
+    font-family: Arial, sans-serif;
+    .area{
+        display: flex;
+        gap: 2%;
+        background-color: white;
+        border-radius: 10px;
+        border: 2vw solid rgb(191, 106, 29);
+        width: 50vw;
+        aspect-ratio: 2/1.5;
+        margin: auto;
+
+        #about-img{
+            position: relative;
+            flex:1;
+            text-align: center;
+            width: auto;
+            height: 100%;
+
+
+            img {
+                padding: 10% 10%;
+                border-radius: 10%;
+                height: 60%;
+                aspect-ratio: initial;
+            }
+        }
+
+
+        #about-info{
+
+            flex:2;
+            list-style: none;
+            text-align: left;
+            h2{
+                text-align: left;
+            }
+        }
+
+        h2 {
+            font-size: 1.5vw;
+        }
+
+        h3 {
+            font-size: 1.5vw;
+        }
+    }
 }
 
 /* Footer */

@@ -9,20 +9,20 @@
 <body>
     <nav>
         <ul class="sidebar">
-            <li onclick=hideSideBar()><a href="#"><img src="close_icon_black.png" alt="close-icon"></a></li>
+            <li onclick=hideSideBar()><a href="javascript:void(0)"><img src="close_icon_black.png" alt="close-icon"></a></li>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">My Diplomas</a></li>
-            <li><a href="#">My Experiences</a></li>
-            <li><a href="#">My Projects</a></li>
+            <li><a href="#diplomas">My Diplomas</a></li>
+            <li><a href="#experiences">My Experiences</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
         <ul>
             <li><a href="#">Home</a></li>
-            <li class="hideOnMobile"><a href="#">About Me</a></li>
-            <li class="hideOnMobile"><a href="#">My Diplomas</a></li>
-            <li class="hideOnMobile"><a href="#">My Experiences</a></li>
-            <li class="hideOnMobile"><a href="#">My Projects</a></li>
-            <li onclick=showSideBar() class="hideOnPc"><a href="#"><img src="menu_icon_black.png" alt="menu-icon"></a></li>
+            <li class="hideOnMobile"><a href="#diplomas">My Diplomas</a></li>
+            <li class="hideOnMobile"><a href="#experiences">My Experiences</a></li>
+            <li class="hideOnMobile"><a href="#projects">My Projects</a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
+            <li onclick=showSideBar() class="hideOnPc"><a href="javascript:void(0)"><img src="menu_icon_black.png" alt="menu-icon"></a></li>
         </ul>
     </nav>
     <div class="mainFrame">
@@ -39,46 +39,28 @@
 
     <div class="whiteRoundedSquare">
 
-        <div class="section" id="about">
-            <div class="area">
-                <div id="about-img">
-                    <img src="about.jpg" alt="My photo">
-                    <h2><b>Thomas PAILLEREAU</b></h2>
-                </div>
-                <ul id="about-info">
-                    <li><h2><b>Nationality</b></h2>French</li>
-                    <li>
-                        <h2><b>School</b></h2>
-                        <ul>
-                            <li>EPITA Strasbourg</li>
-                            <li>Shibaura Institute of Technology, Toyosu Campus</li>
-                        </ul>
-                    </li>
-                    <li><h2><b>Major</b></h2>Computer Science, 2nd Year</li>
-                </ul>
-            </div>
-        </div>
-
         <div class="section" id="diplomas">
             <h1>My Schools and Diplomas</h1>
             <div class="timeline">
                 <div class="year">2023</div>
                 <div class="content">
-                    <h2>Cambridge English Exam</h2>
+                    <img src="Diplomas/cambridge_assessment_logo.png" alt="Cambridge Assessment image">
                 </div>
                 <div class="content">
+                    <img src="Diplomas/bac-logo.png" alt="Baccalaureate Emoji">
                     <h2>Baccalaureate</h2>
                 </div>
                 <div class="content">
-                    <h2>EPITA</h2>
+                    <img src="Diplomas/epita-logo.png" alt="EPITA logo">
+                    <h2>School of Engineering & Computer Science</h2>
                 </div>
                 <div class="year">2024</div>
                 <div class="content">
-                    <h2>TOEIC Exam</h2>
+                    <img src="Diplomas/toeic-logo.png" alt="TOEIC image">
                 </div>
                 <div class="year">2025</div>
                 <div class="content">
-                    <h2>Shibaura Institute of Technology</h2>
+                    <img src="Diplomas/SIT-logo.png" alt="SIT logo">
                 </div>
             </div>
         </div>
@@ -87,35 +69,104 @@
             <h1>My Experiences</h1>
             <div class="button-area">
                 <div class="button mov">
-                    <img src="arrow-back.png" alt="Back Arrow">
+                    <a href="javascript:void(0)"><img src="arrow-back.png" alt="Back Arrow"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/schmidt-logo.jpg" alt="Schmidt Group Logo">
+                <div class="button exp" onclick=expDisplay(0)>
+                    <a href="javascript:void(0)"><img src="Experiences/schmidt-logo.jpg" alt="Schmidt Group Logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/schuler-logo.png" alt="Schuler Group Logo">
+                <div class="button exp" onclick=expDisplay(1)>
+                    <a href="javascript:void(0)"><img src="Experiences/schuler-logo.png" alt="Schuler Group Logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/game-jam-logo.png" alt="Yoyo game jam 42 logo">
+                <div class="button exp" onclick=expDisplay(2)>
+                    <a href="javascript:void(0)"><img src="Experiences/game-jam-logo.png" alt="Yoyo game jam 42 logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/telligo-logo.png" alt="Telligo Logo">
+                <div class="button exp" onclick=expDisplay(3)>
+                    <a href="javascript:void(0)"><img src="Experiences/telligo-logo.png" alt="Telligo Logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/mjc-logo.png" alt="MJC logo">
+                <div class="button exp" onclick=expDisplay(4)>
+                    <a href="javascript:void(0)"><img src="Experiences/mjc-logo.png" alt="MJC logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/sbz-logo.png" alt="Saint Bio Z logo">
+                <div class="button exp" onclick=expDisplay(5)>
+                    <a href="javascript:void(0)"><img src="Experiences/sbz-logo.png" alt="Saint Bio Z logo"></a>
                 </div>
-                <div class="button exp">
-                    <img src="Experiences/leclerc-logo.png" alt="E.Leclerc Logo">
+                <div class="button exp" onclick=expDisplay(6)>
+                    <a href="javascript:void(0)"><img src="Experiences/leclerc-logo.png" alt="E.Leclerc Logo"></a>
                 </div>
                 <div class="button mov">
-                    <img src="arrow-forward.png" alt="Forward Arrow">
+                    <a href="javascript:void(0)"><img src="arrow-forward.png" alt="Forward Arrow"></a>
                 </div>
             </div>
-            <div class="text-box">
-
+            <div class="text-box" id="expTextBox">
+                <div>
+                    <b>Company / Association :</b> Schmidt Group<br>
+                    <b>Date :</b> January 2025 to February 2025<br>
+                    <b>Goal of the experience :</b> Studying IA tools for non-developpers<br>
+                    <b>Knowledge / Skills obtained :
+                        </b> - Research on the internet
+                        <br> - IA Prompting
+                        <br> - IA Interaction
+                        <br> - IA Simulation
+                        <br> - IA tool creation
+                        <br> - Group work<br>
+                </div>
+                <div>
+                    <b>Company / Association :</b> Schuler France<br>
+                    <b>Date :</b> 1 week in Frebuary 2019<br>
+                    <b>Goal of the experience :</b> Mandatoy Middle School Internship<br>
+                    <b>Knowledge / Skills obtained :
+                    </b> - Documentation understanding
+                    <br> - Excel Analyze
+                    <br> - Excel Creation
+                    <br> - Robotic Developement
+                </div>
+                <div>
+                    <b>Experience:</b> Yoyo game jam 42<br>
+                    <b>Date :</b> 4 days in August 2021<br>
+                    <b>Goal of the experience :</b> Developing a videogame in 4 days<br>
+                    <b>Knowledge / Skills obtained :
+                    </b> - Game design
+                    <br> - Graphic design
+                    <br> - Planning
+                    <br> - Group work<br>
+                </div>
+                <div>
+                    <b>Company / Association :</b> Videogame Programming Summer camp<br>
+                    <b>Date :</b> August 2020<br>
+                    <b>Goal of the experience :</b> Studying how to make a videogame<br>
+                    <b>Knowledge / Skills obtained :
+                    </b> - Research on the internet
+                    <br> - Game developement
+                    <br> - Basic computer science knowledge<br>
+                </div>
+                <div>
+                    <b>Company / Association :</b> MJC Scherwiller<br>
+                    <b>Date :</b> 2014 to 2025<br>
+                    <b>Goal of the experience :</b> Contributing to the hobbies of my village<br>
+                    <b>Knowledge / Skills obtained :</b>
+                    <br> - Group work<br>
+                </div>
+                <div>
+                    <b>Company / Association :</b> Saint Bio Z<br>
+                    <b>Data :</b> July to August 2024<br>
+                    <b>Goal of the experience :</b> Employed in an Organic store<br>
+                    <b>Knowledge / Skills obtained :
+                    </b> - Fast thinking
+                    <br> - Observation enhancement
+                    <br> - Group work<br>
+                </div>
+                <div>
+                    <b>Company / Association :</b> E.Leclerc<br>
+                    <b>Data :</b> July 2024<br>
+                    <b>Goal of the experience :</b> Employed in a Fish store in a Supermarket <br>
+                    <b>Knowledge / Skills obtained :
+                    </b> - Fast thinking
+                    <br> - Fish Recognition
+                    <br> - Washing
+                    <br> - Command registration
+                    <br> - Planning
+                    <br> - Efficiency
+                    <br> - Group work<br>
+                </div>
             </div>
         </div>
 
@@ -168,6 +219,26 @@
                         <div class="text-overlay">Sudoku Solver (OCR)</div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="section" id="about">
+            <div class="area">
+                <div id="about-img">
+                    <img src="about.jpg" alt="My photo">
+                    <h2>Thomas PAILLEREAU</h2>
+                </div>
+                <ul id="about-info">
+                    <li><h2>Nationality</h2><h3>French</h3></li>
+                    <li>
+                        <h2><b>School</b></h2>
+                        <ul>
+                            <li><h3>EPITA Strasbourg</h3></li>
+                            <li><h3>Shibaura Institute of Technology, Toyosu Campus</h3></li>
+                        </ul>
+                    </li>
+                    <li><h2>Major</h2><h3>Computer Science, 2nd Year</h3></li>
+                </ul>
             </div>
         </div>
 

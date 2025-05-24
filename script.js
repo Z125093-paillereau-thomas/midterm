@@ -14,7 +14,7 @@ const dTimeline = diplomas.querySelector(".timeline");
 const dContentList = dTimeline.querySelectorAll(".content");
 
 // Experience
-const cells = document.querySelectorAll(".cell");
+const expCells = document.getElementById("experiences").querySelectorAll(".cell");
 
 // Projects
 
@@ -55,7 +55,7 @@ function dipDisplay(n)
 
 
 // Experience
-cells.forEach(cell => {
+expCells.forEach(cell => {
     const closeButton = cell.querySelector('.close-button');
 
     cell.addEventListener('click', () => {

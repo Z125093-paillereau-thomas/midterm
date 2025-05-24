@@ -254,13 +254,17 @@ nav {
         padding: 5vw;
         border-radius: 20px;
         width: 80vw;
-        height: 70vh;
+        height: auto;
         background-color: white;
         margin: 50px auto;
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 2vw;
+
+        @media (max-width: 1200px) {
+            align-items: start;
+        }
 
         @media (max-width: 800px) {
             flex-direction: column;
@@ -272,12 +276,12 @@ nav {
             position: relative;
             top: 0;
             left: 0;
-            height: 100%;
+            height: 60vh;
             aspect-ratio: initial;
             border-radius: 30px;
             
             @media (max-width: 1200px) {
-                height: 80%;
+                height: 56vh;
             }
             @media (max-width: 1000px) {
                 display: none;
@@ -288,11 +292,11 @@ nav {
             height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 3vw;
+            gap: 1vw;
             margin-top: 0;
 
             .title > h2 {
-                padding: 5% 0;
+                padding: 2% 0;
                 font-size: 7vw;
             }
 
@@ -300,7 +304,7 @@ nav {
                 height: 80%;
             }
             @media (max-width: 1000px) {
-                height: 60%;
+                height: 100%;
             }
         }
 
@@ -308,11 +312,12 @@ nav {
             height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 5vw;
+            gap: 2vw;
+            margin-top: 0;
 
-            .skills {
-                height: 30vh;
-                width:  20vw;
+            .about-skills {
+                height: 40vh;
+                width:  100%;
 
                 .grid {
                     height: 100%;
@@ -324,6 +329,7 @@ nav {
 
                     .row {
                         width: 100%;
+                        height: 13vh;
                         display: flex;
                         flex-direction: row;
                         justify-content: start;
@@ -334,29 +340,42 @@ nav {
                             aspect-ratio: 1/1;
                             display: flex;
                             justify-content: center;
-                            background-color: #d0d2d2;
+                            background-color: rgb(190, 205, 165);;
                             border-radius: 10px;
 
                             img {
+
+                                aspect-ratio: 1/1;
                                 margin: auto;
                                 height: 70%;
-                                aspect-ratio: 1/1;
                                 border-radius: 0;
+                                display: block;
+                                filter: grayscale(40%);
                             }
                         }
                     }
                 }
             }
 
-            .experience {
+            .about-exp {
                 height:45%;
                 width: 100%;
 
-                .to-exp {
+                a {
+                    width: 50%;
+                    height: 50%;
                     display: flex;
                     padding-bottom: 5px;
 
                     button {
+                        width: 100%;
+                        height: 100%;
+
+
+                        img {
+                            height: 100%;
+                            aspect-ratio: initial;
+                        }
                     }
                 }
             }
@@ -365,12 +384,16 @@ nav {
                 height: 80%;
             }
             @media (max-width: 1000px) {
-                height: 60%;
+                height: 100%;
+            }
+
+            @media (max-width: 800px) {
+                flex-direction: row;
+                width: 100%;
+                gap: 10%;
             }
 
         }
-
-
 
     }
 }
@@ -543,25 +566,20 @@ nav {
                 }
             }
 
-            @media (any-hover: hover) {
-                .cell:hover {
-                    .title {
-                        transform: translateX(0);
-                        opacity: 1;
-                    }
-                    .content {
-                        transform: translateX(0);
-                        opacity: 1;
-                    }
-                    .image-box {
-                        opacity: 0;
-                        transform: scale(1.05);
-                    }
+            .cell:hover {
+                .title {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                .content {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                .image-box {
+                    opacity: 0;
+                    transform: scale(1.05);
                 }
             }
-
-            
-
 
             .cell.active {
                 cursor: default ;

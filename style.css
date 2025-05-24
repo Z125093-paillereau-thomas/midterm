@@ -262,16 +262,6 @@ nav {
         align-items: center;
         gap: 2vw;
 
-        @media (max-width: 1200px) {
-            align-items: start;
-        }
-
-        @media (max-width: 800px) {
-            flex-direction: column;
-        }
-
-
-
         img {
             position: relative;
             top: 0;
@@ -340,7 +330,7 @@ nav {
                             aspect-ratio: 1/1;
                             display: flex;
                             justify-content: center;
-                            background-color: rgb(190, 205, 165);;
+                            background-color: rgb(190, 205, 165);
                             border-radius: 10px;
 
                             img {
@@ -355,26 +345,63 @@ nav {
                         }
                     }
                 }
+
+                @media screen {
+                    height: 30vh;
+
+                    .grid > .row {
+                        height: 9vh;
+                    }
+                }
             }
 
             .about-exp {
-                height:45%;
+                height:auto;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                gap: 20px;
 
                 a {
-                    width: 50%;
+                    width: fit-content;
                     height: 50%;
-                    display: flex;
-                    padding-bottom: 5px;
+                    max-width: 100%;
+                    max-height: 50px;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    color: black;
+                    background-color: rgb(190, 205, 165);
+                    border-radius: 10px;
+                    cursor: pointer;
 
-                    button {
-                        width: 100%;
+                    :hover {
+                        background-color: rgb(158, 173, 133);
+                        border-radius: 10px;
+                    }
+
+                    .button {
+                        display: flex;
+                        flex-direction: row;
                         height: 100%;
+                        text-align: left;
+                        font-size: 2vw;
+                        object-fit: fill;
 
+                        @media (max-width: 800px) {
+                            font-size: 5vw;
+                        }
+
+                        .text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                        }
 
                         img {
                             height: 100%;
                             aspect-ratio: initial;
+                            display: block;
                         }
                     }
                 }
@@ -385,16 +412,21 @@ nav {
             }
             @media (max-width: 1000px) {
                 height: 100%;
-            }
+                .about-skills a .button .text {
+                    font-size: 10vw;
+                }
 
-            @media (max-width: 800px) {
-                flex-direction: row;
-                width: 100%;
-                gap: 10%;
             }
 
         }
 
+        @media (max-width: 1200px) {
+            align-items: start;
+        }
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
     }
 }
 

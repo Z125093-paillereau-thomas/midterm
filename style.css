@@ -74,7 +74,6 @@ h1 {
     }
 }
 
-
 .section {
     width: 100%;
     left: 10%;
@@ -91,10 +90,6 @@ h1 {
         padding: 10vh;
     }
 }
-
-/* Image and Text container*/
-
-
 
 /* Main Title */
 
@@ -241,9 +236,143 @@ nav {
     background-color: white;
     width:100vw;
     overflow: hidden;
-    gap: 10px;
     display: flex;
     flex-direction: column;
+    border-radius: 0;
+}
+
+/* About Me */
+
+#about {
+    left: 0;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(142,157,117);
+    border-radius: 0;
+    .area {
+        padding: 5vw;
+        border-radius: 20px;
+        width: 80vw;
+        height: 70vh;
+        background-color: white;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2vw;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+
+
+
+        img {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            aspect-ratio: initial;
+            border-radius: 30px;
+            
+            @media (max-width: 1200px) {
+                height: 80%;
+            }
+            @media (max-width: 1000px) {
+                display: none;
+            }
+        }
+
+        .seg1 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 3vw;
+            margin-top: 0;
+
+            .title > h2 {
+                padding: 5% 0;
+                font-size: 7vw;
+            }
+
+            @media (max-width: 1200px) {
+                height: 80%;
+            }
+            @media (max-width: 1000px) {
+                height: 60%;
+            }
+        }
+
+        .seg2 {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5vw;
+
+            .skills {
+                height: 30vh;
+                width:  20vw;
+
+                .grid {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    gap: 1%;
+
+                    .row {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        gap: 1%;
+
+                        .cell {
+                            width: 32%;
+                            aspect-ratio: 1/1;
+                            display: flex;
+                            justify-content: center;
+                            background-color: #d0d2d2;
+                            border-radius: 10px;
+
+                            img {
+                                margin: auto;
+                                height: 70%;
+                                aspect-ratio: 1/1;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .experience {
+                height:45%;
+                width: 100%;
+
+                .to-exp {
+                    display: flex;
+                    padding-bottom: 5px;
+
+                    button {
+                    }
+                }
+            }
+
+            @media (max-width: 1200px) {
+                height: 80%;
+            }
+            @media (max-width: 1000px) {
+                height: 60%;
+            }
+
+        }
+
+
+
+    }
 }
 
 /* Diplomas */
@@ -457,48 +586,6 @@ nav {
     }
 }
 
-/* Skills */
-
-#skills {
-        .column {
-            position: relative;
-            height: auto;
-            display: flex;
-            justify-content: start;
-            flex-direction: column;
-            padding: 10vh 10px;
-
-            .row {
-                position: relative;
-                display: flex;
-                height: auto;
-                padding-bottom: 5%;
-                padding-left: 5%;
-                padding-right: 5%;
-
-                div {
-                    position: relative;
-                    margin: auto;
-                    display: block;
-                    background-color: black;
-                    padding: 10px;
-                    border-radius: 10px;
-                    text-align: center;
-                    width: 20%;
-                    height: auto;
-
-                    img {
-                        position: relative;
-                        width: 75%;
-                        height: auto;
-                    }
-                }
-            }
-
-
-        }
-    }
-
 /* Projects */
 
 #projects {
@@ -595,61 +682,6 @@ nav {
         }
 
 
-    }
-
-/* About Me */
-
-#about {
-        padding: 4vh 0;
-        border: none;
-
-        justify-content: space-evenly;
-        font-family: Arial, sans-serif;
-        .area{
-            display: flex;
-            gap: 2%;
-            background-color: white;
-            border-radius: 10px;
-            border: 2vw solid rgb(191, 106, 29);
-            width: 50vw;
-            aspect-ratio: 2/1.5;
-            margin: 10vh auto;
-
-            #about-img{
-                position: relative;
-                flex:1;
-                text-align: center;
-                width: auto;
-                height: 100%;
-
-
-                img {
-                    padding: 10% 10%;
-                    border-radius: 10%;
-                    height: 60%;
-                    aspect-ratio: initial;
-                }
-            }
-
-
-            #about-info{
-
-                flex:2;
-                list-style: none;
-                text-align: left;
-                h2{
-                    text-align: left;
-                }
-            }
-
-            h2 {
-                font-size: 1.5vw;
-            }
-
-            h3 {
-                font-size: 1.5vw;
-            }
-        }
     }
 
 /* Footer */

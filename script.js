@@ -41,9 +41,6 @@ window.addEventListener('scroll', () => {
     mainFrame.style.transform = `translateY(${-scrollY * 0.5}px)`;
 })
 
-
-
-
 // Diplomas
 
 function dipDisplay(n)

@@ -11,17 +11,17 @@
         <ul class="sidebar">
             <li onclick=hideSideBar()><a href="javascript:void(0)"><img src="close_icon_black.png" alt="close-icon"></a></li>
             <li onclick=hideSideBar()><a href="#">Home</a></li>
+            <li onclick=hideSideBar()><a href="#about">About</a></li>
             <li onclick=hideSideBar()><a href="#diplomas">My Diplomas</a></li>
             <li onclick=hideSideBar()><a href="#experiences">My Experiences</a></li>
             <li onclick=hideSideBar()><a href="#projects">My Projects</a></li>
-            <li onclick=hideSideBar()><a href="#about">About</a></li>
         </ul>
         <ul>
             <li><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
             <li class="hideOnMobile"><a href="#diplomas">My Diplomas</a></li>
             <li class="hideOnMobile"><a href="#experiences">My Experiences</a></li>
             <li class="hideOnMobile"><a href="#projects">My Projects</a></li>
-            <li class="hideOnMobile"><a href="#about">About</a></li>
             <li onclick=showSideBar() class="hideOnPc"><a href="javascript:void(0)"><img src="menu_icon_black.png" alt="menu-icon"></a></li>
         </ul>
     </nav>
@@ -38,6 +38,73 @@
     </div>
 
     <div class="whiteRoundedSquare">
+
+        <div class="section" id="about">
+            <div class="area">
+                <img src="about.jpg" alt="About Photo">
+                <div class="seg1">
+                    <div class="title">
+                        <h2>Hello !</h2>
+                    </div>
+                    <p>
+                        My name is Thomas (Laurent Matthieu) Paillereau.
+                        My strength are computer engineering, game developpement, and IA tools researching.
+                        I love programming and creating. I look forward to contributing my creativity and skills to innovative projects.
+                        <br><br>Hope you enjoy my portfolio.
+                    </p>
+                    <div>
+                        <h2><b>EDUCATION</b></h2>
+                        <ul>
+                            <li>2023-2028: EPITA Strasboug: School of computer engineering</li>
+                            <li>2025: Shibaura Institure of Technology, Toyosu Campus: Computer science major</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="seg2">
+                    <div class="skills">
+                        <h2>SKILLS</h2><br>
+                        <div class="grid">
+                            <div class="row">
+                                <div class="cell">
+                                    <img src="Skills/html-logo.png" alt="html logo">
+                                </div>
+                                <div class="cell">
+                                    <img src="Skills/css-logo.png" alt="css logo">
+                                </div>
+                                <div class="cell">
+                                    <img src="Skills/js-logo.png" alt="javascript logo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">
+                                    <img src="Skills/c-logo.png" alt="c logo">
+                                </div>
+                                <div class="cell">
+                                    <img src="Skills/c%23-logo.png" alt="c# logo">
+                                </div>
+                                <div class="cell">
+                                    <img src="Skills/python-logo.png" alt="python logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <h2>EXPERIENCE / PROJECTS</h2>
+                        <div class="to-exp">
+                            <a href="#experiences">
+                                <button>My experiences <img src="arrow-forward.png" alt="forward arrow"></button>
+                            </a>
+                        </div>
+                        <div class="to-proj">
+                            <a href="#projects">
+                                <button>My projects <img src="arrow-forward.png" alt="forward arrow"></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="section" id="diplomas">
             <h1>My Schools and Diplomas</h1>
@@ -283,25 +350,6 @@
             </div>
         </div>
 
-        <div class="section" id= "skills">
-            <h1>My Skills</h1>
-            <div class="column">
-                <div class="row">
-                    <div><img src="Skills/ocaml-logo.png" alt="ocaml logo"></div>
-                    <div><img src="Skills/python-logo.png" alt="python logo"></div>
-                </div>
-                <div class="row">
-                    <div><img src="Skills/html-logo.png" alt="html logo"></div>
-                    <div><img src="Skills/css-logo.png" alt="css logo"></div>
-                    <div><img src="Skills/js-logo.png" alt="javascript logo"></div>
-                </div>
-                <div class="row">
-                    <div><img src="Skills/c-logo.png" alt="c logo"></div>
-                    <div><img src="Skills/c%23-logo.png" alt="c# logo"></div>
-                </div>
-            </div>
-        </div>
-
         <div class="section" id="projects">
             <h1>My Projects</h1>
             <div class="container">
@@ -332,27 +380,6 @@
                         <div class="text-overlay">Sudoku Solver (OCR)</div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section" id="about">
-            <h1>About</h1>
-            <div class="area">
-                <div id="about-img">
-                    <img src="about.jpg" alt="My photo">
-                    <h2>Thomas PAILLEREAU</h2>
-                </div>
-                <ul id="about-info">
-                    <li><h2>Nationality</h2><h3>French</h3></li>
-                    <li>
-                        <h2><b>School</b></h2>
-                        <ul>
-                            <li><h3>EPITA Strasbourg</h3></li>
-                            <li><h3>Shibaura Institute of Technology, Toyosu Campus</h3></li>
-                        </ul>
-                    </li>
-                    <li><h2>Major</h2><h3>Computer Science, 2nd Year</h3></li>
-                </ul>
             </div>
         </div>
 

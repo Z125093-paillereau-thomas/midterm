@@ -17,7 +17,7 @@ const dContentList = dTimeline.querySelectorAll(".content");
 const expCells = document.getElementById("experiences").querySelectorAll(".cell");
 
 // Projects
-
+const projItems = document.getElementById("projects").querySelectorAll(".item");
 
 
 
@@ -57,7 +57,6 @@ function dipDisplay(n)
 // Experience
 expCells.forEach(cell => {
     const closeButton = cell.querySelector('.close-button');
-
     cell.addEventListener('click', () => {
         if (!cell.classList.contains('active')) {
             cell.classList.add('active');
@@ -68,6 +67,32 @@ expCells.forEach(cell => {
         e.stopPropagation();
         cell.classList.remove('active');
     });
+});
+
+// Projects
+
+projItems.forEach(item => {
+    const slider = item.querySelector(".slider")
+    const arrow = slider.querySelector('.arrow');
+
+    arrow.addEventListener('click', (e) => {
+        if (!slider.classList.contains('active')) {
+            slider.classList.add('active');
+            if (!item.classList.contains('active')){
+                item.classList.add('active');
+            }
+        }
+        else
+        {
+            e.stopPropagation();
+            slider.classList.remove('active');
+            if (item.classList.contains('active')){
+                item.classList.remove('active');
+            }
+        }
+    });
+
+
 });
 
 

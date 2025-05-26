@@ -93,7 +93,7 @@ h1 {
 
 /* Main Title */
 
-.mainFrame {
+header {
     z-index: 0;
     width: 100vw;
     height: 100vh;
@@ -232,7 +232,7 @@ nav {
 
 /* Content */
 
-.whiteRoundedSquare {
+main {
     background-color: white;
     width:100vw;
     overflow: hidden;

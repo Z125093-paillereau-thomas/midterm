@@ -6,7 +6,7 @@
 const sidebar = document.querySelector(".sidebar");
 
 // Mainframe
-const mainFrame = document.querySelector(".mainFrame").querySelector(".container").querySelector("img");
+const header = document.querySelector("header").querySelector(".container").querySelector("img");
 
 //Diplomas
 const diplomas = document.getElementById("diplomas");
@@ -38,11 +38,10 @@ function hideSideBar()
 //Mainframe
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    mainFrame.style.transform = `translateY(${-scrollY * 0.5}px)`;
+    header.style.transform = `translateY(${-scrollY * 0.5}px)`;
 })
 
 // Diplomas
-
 function dipDisplay(n)
 {
     let d = dContentList[n];

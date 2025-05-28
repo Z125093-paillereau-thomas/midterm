@@ -1,9 +1,3 @@
-/* Color Pallette
-- Dark Brown : 69,64,52
-- Brown : 107,86,36
-- Gray Brown : 123,113,95
-*/
-
 /* General */
 
 html {
@@ -86,6 +80,7 @@ nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 
+    /*Classic Nav bar display*/
     ul {
         width: 100%;
         height: 100%;
@@ -121,7 +116,7 @@ nav {
         }
     }
 
-
+    /*Sliding Bar (when on phone or tablet)*/
     .sidebar {
         position: fixed;
         top: 0;
@@ -153,6 +148,7 @@ nav {
         width: 100%;
     }
 
+    /*Function to hide the sliderbar (linked with the javascript)*/
     .hideOnPc {
         display: none;
     }
@@ -178,7 +174,6 @@ header {
     z-index: 0;
     width: 100vw;
     height: 100vh;
-
 
     .container {
         z-index: inherit;
@@ -478,6 +473,7 @@ main {
         margin-top: 0;
     }
 
+    /* Functional properties of the timeline (ex: flex)*/
     .timeline {
         padding-top: 10vh;
         position: relative;
@@ -485,6 +481,7 @@ main {
         left: 10%;
     }
 
+    /* Display of the bar of the timeline*/
     .timeline::after{
         content: '';
         position: absolute;
@@ -496,6 +493,7 @@ main {
         margin-left: -3px;
     }
 
+    /* Display of the years*/
     .year {
         z-index: 1;
         position: relative;
@@ -508,6 +506,7 @@ main {
         left: -5%;
     }
 
+    /* Display of each diplomas*/
     .content {
         width: 70%;
         height: auto;
@@ -520,6 +519,7 @@ main {
         display: flex;
         flex-direction: column;
 
+        /* Photo and title of the diploma*/
         .normal-display {
             padding: 3% 0;
             text-align: left;
@@ -544,25 +544,19 @@ main {
             }
         }
 
+        /* Hovering Display*/
         .normal-display:hover {
             background-color: lightgray;
         }
 
-        .arrow {
-            display: none;
-            flex-direction: row;
-            justify-content: center;
-            img {
-                transform: rotate(90deg);
-            }
-        }
-
+        /* Information on the diploma*/
         .text-box {
             display: none;
             flex-direction: column;
         }
     }
 }
+
 /* Experiences */
 
 #experiences {
@@ -578,7 +572,8 @@ main {
         margin: auto 5vw;
         padding-top: 10vh;
         padding-bottom: 10vh;
-            
+
+        /* Each Experience*/
         .cell {
             position: relative;
             height: 45vh;
@@ -587,6 +582,7 @@ main {
             overflow: hidden;
             cursor: pointer;
 
+            /* Image on the cell*/
             .image-box {
                 z-index: 1;
                 height: 100%;
@@ -603,6 +599,7 @@ main {
                 }
             }
 
+            /* Text that display when hovering*/
             .text-box {
                 position: absolute;
                 padding: 20px;
@@ -648,6 +645,7 @@ main {
             }
         }
 
+        /* Animation of the displaying of the text*/
         .cell:hover {
             .title {
                 transform: translateX(0);
@@ -663,6 +661,7 @@ main {
             }
         }
 
+        /* Locking the text in place (interacts with the JavaScript)*/
         .cell.active {
                 cursor: default ;
                 .title {
@@ -697,7 +696,7 @@ main {
             gap: 20px;
             margin: auto;
 
-
+            /*Each Project*/
             .item {
                 transition: margin-bottom 0.5s ease;
                 max-width: inherit;
@@ -705,6 +704,7 @@ main {
                 background-color: white;
                 margin: 0;
 
+                /* Image and Title of the project*/
                 .normal-display {
                     width: 100%;
                     height: 100%;
@@ -734,6 +734,7 @@ main {
                     }
                 }
 
+                /* Arrow and the slider*/
                 .slider {
                     z-index: 2;
                     position: absolute;
@@ -831,6 +832,7 @@ main {
                     }
                 }
 
+                /* Animation when clicking on the arrow*/
                 .slider.active {
                     transform: translate(80%,-100%);
                     .arrow img {
@@ -838,6 +840,7 @@ main {
                     }
                 }
 
+                /* Variation when the project is on the right*/
                 &.right {
                     .normal-display {
                         flex-direction: row-reverse;
@@ -1040,7 +1043,7 @@ main {
         margin-bottom: 10px;
         color: white;
     }
-
+    /* General display of the footer*/
     .seg {
         display: flex;
         flex-direction: column;
@@ -1093,6 +1096,7 @@ main {
         }
     }
 
+    /* Display of the Contacts and the Teams*/
     .seg.one {
         display: flex;
         flex-direction: row;
@@ -1116,6 +1120,7 @@ main {
         }
     }
 
+    /* Display of the Sources*/
     .seg.two {
         display: flex;
         flex-direction: row;
@@ -1123,6 +1128,7 @@ main {
         gap: 40px;
     }
 
+    /* Display of the Copyright text*/
     .seg.three {
         text-align: center;
         margin-top: 20px;

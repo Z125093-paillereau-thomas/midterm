@@ -228,7 +228,6 @@ header {
         margin: auto;
         width: max(5%,10vh);
         aspect-ratio: 1/1;
-        border: black solid 2px;
         display: flex;
         justify-content: center;
         background-color: #f1f1f1;
@@ -412,9 +411,10 @@ main {
                         }
 
                         img {
-                            height: 100%;
-                            aspect-ratio: initial;
                             display: block;
+                            height: 100%;
+                            max-height: 50px;
+                            aspect-ratio: initial;
                         }
                     }
                 }
@@ -765,6 +765,11 @@ main {
                                 .text-link {
                                     padding-left: 8px;
                                     color: black;
+                                }
+
+                                img {
+                                    height: 100%;
+                                    aspect-ratio: 1/1;
                                 }
                             }
 

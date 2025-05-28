@@ -5,8 +5,8 @@
 // Nav
 const sidebar = document.querySelector(".sidebar");
 
-// Mainframe
-const header = document.querySelector("header").querySelector(".container").querySelector("img");
+// Header
+const header = document.querySelector("header").querySelector(".container");
 
 //Diplomas
 const diplomas = document.getElementById("diplomas");
@@ -18,8 +18,6 @@ const expCells = document.getElementById("experiences").querySelectorAll(".cell"
 
 // Projects
 const projItems = document.getElementById("projects").querySelectorAll(".item");
-
-
 
 
 
@@ -36,8 +34,11 @@ function hideSideBar() {
 /// Header functions
 // Scrolls the header slower than the page
 window.addEventListener('scroll', () => {
+
+    const mainFrame = header.querySelector("img");
     const scrollY = window.scrollY;
     header.style.transform = `translateY(${-scrollY * 0.5}px)`;
+
 })
 
 /// Diplomas functions

@@ -636,6 +636,15 @@ main {
                     opacity: 0;
                     transition: opacity 0.2s ease;
                 }
+                
+                @media (max-height: 700px) {
+                    .title {
+                        font-size: 3vh;
+                    }
+                    .content {
+                        font-size: 2vh;
+                    }
+                }
             }
         }
 
@@ -747,6 +756,7 @@ main {
                         height: 85%;
                         background-color: #edffe5;
                         border-radius: 8px;
+                        overflow: hidden;
 
                         .text {
                             height: 100%;

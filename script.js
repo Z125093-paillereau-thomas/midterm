@@ -34,8 +34,6 @@ function hideSideBar() {
 /// Header functions
 // Scrolls the header slower than the page
 window.addEventListener('scroll', () => {
-
-    const mainFrame = header.querySelector("img");
     const scrollY = window.scrollY;
     header.style.transform = `translateY(${-scrollY * 0.5}px)`;
 

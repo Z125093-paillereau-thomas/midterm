@@ -185,6 +185,7 @@ header {
         position: fixed;
         width: 100%;
         height: 100%;
+        align-items: center;
     }
 
     .container > img {
@@ -223,9 +224,9 @@ header {
         z-index: 0;
         position: relative;
         align-items: center;
-        top: 90%;
-        left: 47.5vw;
-        width: 5%;
+        top: 85%;
+        margin: auto;
+        width: max(5%,10vh);
         aspect-ratio: 1/1;
         border: black solid 2px;
         display: flex;

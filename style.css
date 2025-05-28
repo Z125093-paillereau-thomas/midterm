@@ -1,24 +1,8 @@
 /* Color Pallette
-- Darkest Green : 13,29,23
-- Dark Green : 63,72,58
-- Green : 99,113,81
-- Light Green : 142,157,117
-
-- Dark Yellow : 180,155,53
-
 - Dark Brown : 69,64,52
 - Brown : 107,86,36
 - Gray Brown : 123,113,95
-
-- Breaked White : #f1f1f1
 */
-
-/* Color Pallette 2
- - Good brown : #534644
- - Text Good black : #464c49
- - Lightly Gray White : #f0f2f2
- - Good green : 125,140,79
- */
 
 /* General */
 
@@ -88,50 +72,6 @@ h1 {
         text-align: center;
         background-color: rgb(125,140,79);
         padding: 10vh;
-    }
-}
-
-/* Main Title */
-
-header {
-    z-index: 0;
-    width: 100vw;
-    height: 100vh;
-
-
-    .container {
-        z-index: -1;
-        position: fixed;
-    }
-
-    .container > img {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        object-position: center top;
-    }
-
-    .container div {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        top: 47%;
-
-        .title {
-            z-index: 0;
-            position: fixed;
-            color: black;
-            display: block;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(105, 46, 4, 0.4);
-            backdrop-filter: blur(10px);
-        }
     }
 }
 
@@ -230,7 +170,51 @@ nav {
 
 }
 
-/* Content */
+/* Main Frame (and main title) */
+
+header {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+
+
+    .container {
+        z-index: -1;
+        position: fixed;
+    }
+
+    .container > img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .container div {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        top: 47%;
+
+        .title {
+            z-index: 0;
+            position: fixed;
+            color: black;
+            display: block;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(105, 46, 4, 0.4);
+            backdrop-filter: blur(10px);
+        }
+    }
+}
+
+/* White block that goes onto the header*/
 
 main {
     background-color: white;
@@ -952,7 +936,7 @@ main {
         }
     }
 
-/* Contact */
+/* Contact  (footer) */
 
 #contact {
     z-index: 6;
@@ -993,7 +977,9 @@ main {
                     align-items: center;
                     padding: 5px 10px;
                     border-radius: 8px;
-                    transition: background-color 0.3s ease;
+                    transition:
+                        background-color 0.3s ease,
+                        transform 0.2s ease;
 
                     img {
                         height: 40px;
@@ -1012,9 +998,9 @@ main {
 
                 .button:hover {
                     background-color: rgba(255, 255, 255, 0.1);
+                    transform: scale(1.2);
                     img {
-                        height: 50px;
-                        width: 50px;
+
                     }
                 }
             }

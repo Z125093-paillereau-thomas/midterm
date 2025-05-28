@@ -22,28 +22,27 @@ const projItems = document.getElementById("projects").querySelectorAll(".item");
 
 
 
-/// Functions
 
-// Nav
-function showSideBar()
-{
+/// Nav functions
+// Showing the sidebar
+function showSideBar() {
     sidebar.style.display = "flex";
 }
-
-function hideSideBar()
-{
+// Showing the slidebar
+function hideSideBar() {
     sidebar.style.display = "none";
 }
 
-//Mainframe
+/// Header functions
+// Scrolls the header slower than the page
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     header.style.transform = `translateY(${-scrollY * 0.5}px)`;
 })
 
-// Diplomas
-function dipDisplay(n)
-{
+/// Diplomas functions
+// Displays the information of a given diploma
+function dipDisplay(n) {
     let d = dContentList[n];
     let t = d.querySelector(".text-box");
     if (t.style.display === "flex")
@@ -53,23 +52,26 @@ function dipDisplay(n)
 }
 
 
-// Experience
+/// Experiences functions
 expCells.forEach(cell => {
     const closeButton = cell.querySelector('.close-button');
+
+    // Locks the text of the cell in place when the cell is clicked
     cell.addEventListener('click', () => {
         if (!cell.classList.contains('active')) {
             cell.classList.add('active');
         }
     });
 
+    // Unlocks the text when the cross is clicked
     closeButton.addEventListener('click', (e) => {
         e.stopPropagation();
         cell.classList.remove('active');
     });
 });
 
-// Projects
-
+/// Projects functions
+// Toggle the animation of the slider of a given project
 projItems.forEach(item => {
     const slider = item.querySelector(".slider")
     const arrow = slider.querySelector('.arrow');

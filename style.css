@@ -216,7 +216,7 @@ header {
             display: block;
             padding: 20px;
             border-radius: 10px;
-            background-color: rgb(197, 150, 108, 0.6);
+                background-color: rgb(197, 150, 108, 0.7);
             backdrop-filter: blur(10px);
             font-size: 10vh;
         }
@@ -993,6 +993,22 @@ main {
                         padding: 0 30px;
                         .content {
                             font-size: 17px;
+                        }
+                    }
+                }
+                
+                @media (max-height: 600px) and (min-width: 820px) {
+                    .slider .text-box .text {
+                        .title {
+                            font-size: 4vh;
+                        }
+
+                        .content {
+                            font-size: 3vh;
+                        }
+
+                        .link {
+
                         }
                     }
                 }
